@@ -1,0 +1,209 @@
+:root {
+  --primary-color: #F1F1F1;
+  --secondary-color: #fefefe;
+  --texto: #c8c8c8;
+  --textoHover: #acabad;
+  --azul: #3e60e9;
+  --azulHover: rgb(37, 75, 230);
+  --sombra:rgba(0,0,0,.16);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+nav {
+  background: var(--secondary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px var(--sombra);
+          box-shadow: 10px 10px 20px var(--sombra);
+}
+
+nav .logotipo {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: var(--texto);
+}
+
+nav .enlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .enlaces a {
+  margin-right: 40px;
+  color: var(--texto);
+}
+
+nav .enlaces a:hover {
+  color: var(--textoHover);
+}
+
+.switch {
+  background-color: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 50%;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background-color: orange;
+  color: black;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background-color: transparent;
+  color: white;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 40px 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding: 40px 0;
+}
+
+.grid .card {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 10px 10px 10px var(--sombra);
+          box-shadow: 10px 10px 10px var(--sombra);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  min-height: 195px;
+  margin-top: 50px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.grid .card img {
+  vertical-align: top;
+  border-radius: 7px;
+  position: absolute;
+  top: -50px;
+  width: calc(100% - 40px);
+  max-height: 165px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid .card .botones {
+  width: 100%;
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.grid .card .botones .boton {
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  display: block;
+  background: #111111;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.grid .card .botones .boton.primario {
+  background: #3E60E9;
+}
+
+.grid .card .botones .boton.primario:hover {
+  background: #254BE6;
+}
+
+.grid .card .botones .boton.secundario {
+  background: #C8C8C8;
+}
+
+.grid .card .botones .boton.secundario:hover {
+  background: #ACABAB;
+}
+/*# sourceMappingURL=estilos.css.map */
